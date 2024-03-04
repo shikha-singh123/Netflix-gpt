@@ -1,0 +1,26 @@
+[debug] [2024-03-02T18:27:33.034Z] ----------------------------------------------------------------------
+[debug] [2024-03-02T18:27:33.037Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-03-02T18:27:33.038Z] CLI Version:   13.4.0
+[debug] [2024-03-02T18:27:33.038Z] Platform:      win32
+[debug] [2024-03-02T18:27:33.039Z] Node Version:  v18.16.1
+[debug] [2024-03-02T18:27:33.040Z] Time:          Sat Mar 02 2024 23:57:33 GMT+0530 (India Standard Time)
+[debug] [2024-03-02T18:27:33.040Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-03-02T18:27:33.144Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-03-02T18:27:33.145Z] > authorizing via signed-in user (singhshikha9920@gmail.com)
+[debug] [2024-03-02T18:27:33.145Z] [iam] checking project netflixgpt-68351 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-03-02T18:27:33.148Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-68351:testIamPermissions [none]
+[debug] [2024-03-02T18:27:33.148Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-68351:testIamPermissions x-goog-quota-user=projects/netflixgpt-68351
+[debug] [2024-03-02T18:27:33.149Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-68351:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-03-02T18:27:35.213Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-68351:testIamPermissions 200
+[debug] [2024-03-02T18:27:35.215Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-68351:testIamPermissions {}
+[debug] [2024-03-02T18:27:35.215Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project netflixgpt-68351:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2024-03-02T18:27:35.218Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/netflixgpt-68351 [none]
+[debug] [2024-03-02T18:27:36.183Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/netflixgpt-68351 403
+[debug] [2024-03-02T18:27:36.183Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/netflixgpt-68351 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2024-03-02T18:27:36.187Z] HTTP Error: 403, The caller does not have permission
+[error] 
+[error] Error: Assertion failed: resolving hosting target of a site with no site name or target name. This should have caused an error earlier
