@@ -9,6 +9,8 @@ import { addUser } from "../utils/userSlice";
 import {auth} from '../utils/firebase';
 import { useNavigate } from "react-router-dom";
 import  {useDispatch} from "react-redux";
+import { BG_URL } from "../utils/constants";
+import { USER_AVATAR } from "../utils/constants";
 const In=()=>{
  
   const [isSignInForm,setIsSignInForm]=useState(true);
@@ -44,7 +46,7 @@ const In=()=>{
 
      updateProfile(user, {
       displayName: name.current.value,
-       photoURL: "https://img.freepik.com/free-vector/girl-shy-character_1450-155.jpg?size=338&ext=jpg&ga=GA1.1.1395880969.1709424000&semt=ais"
+       photoURL:USER_AVATAR
     }).then(() => {
       const{uid,email,displayName,photoURL}=auth.currentUser;   
       dispatch(
@@ -74,8 +76,7 @@ const In=()=>{
                .then((userCredential) => {
                  // Signed in 
                  const user = userCredential.user;
-                 console.log(user);
-                 navigate("/browse");
+         
                })
                .catch((error) => {
                  const errorCode = error.code;
@@ -98,8 +99,8 @@ const In=()=>{
     };
     return( <div>
           <Header/> 
-          <div className="absolute">
-            <img src="https://assets.nflxext.com/ffe/siteui/vlv3/93da5c27-be66-427c-8b72-5cb39d275279/94eb5ad7-10d8-4cca-bf45-ac52e0a052c0/IN-en-20240226-popsignuptwoweeks-perspective_alpha_website_medium.jpg"
+          <div className="absolute w-full h-full">
+            <img src={BG_URL}
             alt="logo"/>
           </div >
           
