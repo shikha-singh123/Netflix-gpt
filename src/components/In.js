@@ -25,8 +25,6 @@ const In=()=>{
 
   const handleButtonClick=()=>{
     //validation of form data
-    console.log(email.current.value);
-    // console.log(name.current.value);
    const message =checkValidateData(email.current.value,password.current.value)
       setErrorMessage(message);
       
